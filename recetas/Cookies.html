@@ -37,12 +37,100 @@
 				margin: auto;
 				text-align: left;
 				margin-bottom: 50px;}
+		
+		
+
+introducir la descripción de la imagen aquí
+
+Alguien sabe alguna propiedad de html o css para hacer el ajuste bien?
+
+introducir la descripción de la imagen aquí
+
+ul, ol {
+    list-style:none;
+  }
+
+  .nav > li {
+    float:left;
+  }
+
+  .nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+  }
+
+  .nav li a:hover {
+    background-color:#0c6ab0 !important;
+     border:6px solid #0c6ab0 !important;
+
+  }
+  .nav li a{
+     border:2.5px solid #0c6ab0 !important;
+  }
+  .nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+  }
+
+  .nav li:hover > ul {
+    display:block;
+  }
+
+  .nav li ul li a {
+    position:relative;
+    right: 7% !important;
+    border:2px solid #0c6ab0 ;
+    color:#fff !important;
+
+  }
+  .nav li ul li a {
+    border:2px solid #131415 !important;
+
+  }
+  .nav ul li ul li{
+      position:relative !important;
+  }
+
+  .nav ul li ul li{
+      right: 0px !important;
+      top:0px !important;
+  }
+  .alinea{
+ padding: 10px;
+
+
+  }
+
 
 </style>
 </head>	
 	
 <body>
 	<big><h1>Cookies</h1></big>
+	       <div class="menu-movil">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+	<nav class="navegacion-principal clearfix">
+            <div class="mover">
+            <a href="servicio.php">Formulario</a>
+            <a href="conferencia.html">Registros</a>
+            <a href="calendario.html">Excel</a>
+            <a href="invitados.html">Facturas y tickets</a>
+             <ul class="nav margen"><li> <a href="registro.html">Agendas</a>
+             <ul>
+                <li> <a class="va" href="registro.html">Vehiculos</a></li>
+                <li> <a href="registro.html">Proveedores</a></li>
+             </ul></li>
+           </ul>
+        </div>
+        </nav>
 
 	<div class="contenedor-tabla" >
     		<div class="contenedor-fila">
