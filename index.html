@@ -46,8 +46,6 @@ ul.tab li a:focus, .active {
 
 /* estilo de las tablas*/
 
-
-
 table, th, td {
     /*border: 1px solid black;*/
     border-collapse: collapse;
@@ -66,7 +64,12 @@ tr:nth-child(even) {
   background-color: #f2f2f2
 }
 
-#menupantallaInicio td tr a:hover {
+.menupantallaInicio {
+	    border-collapse: collapse;
+		width: 100%;
+			}	
+
+table.menupantallaInicio td tr a:hover {
    		 background: #000;
    		 border-left: 10px solid darkred;
     		color: white;
@@ -78,17 +81,6 @@ tr:nth-child(even) {
 
 <body style="background-color:Ghostwhite;">
 
-<table id = "menupantallaInicio">
-	<tr>
-		<td><a>Todas</a></td>
-		<td><a>Entrantes y primeros</a></td>
-	</tr>
-	<tr>
-		<td><a>Carnes</a></td>
-		<td><a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/postres.html">Postres</a></td>
-	
-	</tr>
-	</table>
 	
 		
 	
@@ -104,6 +96,19 @@ tr:nth-child(even) {
 </ul></div>
 
 
+<table class = "menupantallaInicio">
+	<tr>
+		<td><a>Todas</a></td>
+		<td><a>Entrantes y primeros</a></td>
+	</tr>
+	<tr>
+		<td><a>Carnes</a></td>
+		<td><a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/postres.html">Postres</a></td>
+	
+	</tr>
+	</table>
+	
+	
 <div id="Entrantes y primeros" class="tabcontent">
   <table id="PrimerosTabla">
 	<tr class="header"><th style="width:100%;">Indice</th></tr>
