@@ -82,15 +82,88 @@
   
 <body>
 	<big> <h1> Postres </h1></big>
-	<div id="menu">
-		<ul class="nav margen">
-			<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/Entrantes y primeros.html">Entrantes y primeros</a></li>
-			<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/salsas.html"> Salsas</a></li>
-                       	<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/carnes.html">Carnes</a></li>
-                	<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/pescados.html">Pescados</a></li>
-			<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/postres.html">Postres</a></li>
-             	</u>
-       
-       
+<div id="Postres" class="tabcontent">
+	<table >
+	
+		<tr>
+			<td>
+				<table id="PostresTabla" border="1" bordercolor="black" id="PostresTabla">
+					<tr class="header"><th onclick="sortTable(0)" style="text-align: left; vertical-align: middle;"> Indice </th></tr>
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Bizcocho de platano.html">Bizcocho de platano</a></td></tr>
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Bizcocho de turron, perlas de chocolate y yogurt griego.html">Bizcocho de turron, perlas de chocolate y yogurt griego</a></td></tr>
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/tarta de queso philadelphia.html">Tarta de queso philadelphia</a></td></tr>
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Tiramisu.html">Tiramisu</a></td></tr> 
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Orejuelas.html">Orejuelas</a></td></tr> 
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Bizcocho de zanahora.html">Bizcocho de zanahora</a></td></tr> 
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Cookies.html">Cookies</a></td></tr>
+				
+				
+				</table>
+			</td>
+			<td>
+				<table border="0" bordercolor="black">
+					<tr><td><img src="postres.jpg" border="0" vspace="0" hspace="0" align="right"></img></td></tr>
+				</table>
+			</td>
+		</tr>
+	</table>
 </div>
+
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("PostresTabla");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("td")[n];
+      y = rows[i + 1].getElementsByTagName("td")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
   </body>
