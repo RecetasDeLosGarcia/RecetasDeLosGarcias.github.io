@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<style>
+		body {background-color: Ghostwhite;
+			margin: 10px}
+		
+		#titulo {
+			color: darkred;
+			font size: 7}
+		h1 {
+			color: darkred;
+			margin: 30px}
+		h2 {
+			color: darkred;
+			margin: 30px}
+		p, lu, li {  
+			margin-left: 30px;
+  			margin-right: 30px;}
+	
+		#preparacion {
+			width: 350px;
+ 			border: black 2px solid;
+  			float: right;
+			background-color: white
+		}
+		
+		.contenedor-tabla{display: table;
+			width:65%;
+			border=1; 
+			margin: 0 auto;}
+
+		.contenedor-fila{display: table-row;}
+
+		.contenedor-columna{display: table-cell;
+				width: 100%;
+				margin: auto;
+				text-align: left;
+				margin-bottom: 50px;}
+		#menu {
+		float:right
+			}
+			
+		#menu ul {
+    			list-style-type: none;
+    			margin: 0px;
+    			padding: 0px;
+    			width: 300px;
+    			font-family: Arial, sans-serif;
+    			font-size: 11pt;
+
+		}
+		
+		#menu ul {
+    			list-style-type: none;
+   			 margin: 0px;
+    			padding: 0px;
+   			 width: 200px;
+    			font-family: Arial, sans-serif;
+    			font-size: 11pt;
+			}
+		
+		#menu ul li {
+    			background-color: darkred;
+				}
+
+		#menu ul li a {
+    			color: white;
+   	 		text-decoration: none;
+    			text-transform: uppercase;
+    			display: block;
+    			padding: 10px 10px 10px 20px;
+			}
+ 		#menu ul li a:hover {
+   		 background: #000;
+   		 border-left: 10px solid darkred;
+    		color: white;
+			}
+</style>
+</head>	
+  
+<body>
+	<big> <h1> Salsas </h1></big>
+	
+		     <div class="menu-movil">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+	<div id="menu">
+		<ul class="nav margen">
+			<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/Entrantes y primeros.html">Entrantes y primeros</a></li>
+			<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/salsas.html"> Salsas</a></li>
+                       	<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/carnes.html">Carnes</a></li>
+                	<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/pescados.html">Pescados</a></li>
+			<li> <a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/postres.html">Postres</a></li>
+             	</u>
+       
+        </div>
+	
+<div id="Postres" class="tabcontent">
+	<table >
+	
+		<tr>
+			<td>
+				<table id="SalsasTabla" border="1" bordercolor="black" id="PostresTabla">
+					<tr class="header"><th onclick="sortTable(0)" style="text-align: left; vertical-align: middle;"> Indice </th></tr>
+					<tr><td><a href="https://RecetasDeLosGarcia.github.io/recetas/Salsa Roquefort sin nata.html">Salsa Roquefort sin nata</a></td></tr>
+				
+				
+				</table>
+			</td>
+			<td>
+				<table border="0" bordercolor="black">
+					<tr><td><img src="postres.jpg" border="0" vspace="0" hspace="0" align="right"></img></td></tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("SalsasTabla");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("td")[n];
+      y = rows[i + 1].getElementsByTagName("td")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+  </body>
