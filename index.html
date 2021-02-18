@@ -50,17 +50,7 @@ main {
    		 border-left: 10px solid darkred;
     		color: white;
 			}	
-#container {
-    height:100%;
-    border-collapse:collapse;
-    display : table;
-}
 
-.foot {
-    display : table-row;
-    vertical-align : bottom;
-    height : 1px;
-}
 	
 </style>
 	
@@ -69,7 +59,8 @@ main {
 	
 <big><h1> Recetas de los García </h1></big>
 
-	
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscador de recetas" title="¿qué quieres cocinar hoy?">
+
 
 <main id="menu">
 	<div><a href="https://RecetasDeLosGarcia.github.io/menus_intermedios/Entrantes y primeros.html">Entrantes y primeros</a>
@@ -87,10 +78,7 @@ main {
 	</div>
 </main>
 
-<div id="container">
-<div class="foot">
-	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscador de recetas" title="Type in a name">
-</div></div>
+
 
 <script>
 function openCategoria(evt, categoria) {
