@@ -51,11 +51,15 @@ main {
     		color: white;
 			}	
 #container {
-    position: relative;
-}	
-#buscador {
-    position: absolute;
-    bottom: 0;
+    height:100%;
+    border-collapse:collapse;
+    display : table;
+}
+
+.foot {
+    display : table-row;
+    vertical-align : bottom;
+    height : 1px;
 }
 	
 </style>
@@ -84,7 +88,7 @@ main {
 </main>
 
 <div id="container">
-<div id="buscador">
+<div class="foot">
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscador de recetas" title="Type in a name">
 </div></div>
 
