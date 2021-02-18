@@ -97,12 +97,11 @@ main {
 </main>
 
 
-$(document).ready(myFunction() {
-    $('#TodasTabla').DataTable();
-} );
-
-
-<table id="TodasTabla" class="display" style="width:100%">
+<div id="Todas" class="tabcontent">
+	<table >
+		<tr>
+			<td>
+				<table id="TodasTabla" border="1" bordercolor="black" id="TodasTabla">
 					<tr class="header">
 						<td onclick="sortTable(0)" style="text-align: left; vertical-align: middle;"> Indice </td>
 						<td> Categoría </td>
@@ -153,7 +152,12 @@ $(document).ready(myFunction() {
 			<td>
 				<table border="0" bordercolor="black">
 					<tr><td><img src="todas.jpg" border="0" vspace="0" hspace="0" align="right"></img></td></tr>
-</table>
+				</table>
+			</td>
+		</tr>			
+	</table>
+</div>
+	
 
 
 <script>
