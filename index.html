@@ -50,7 +50,9 @@ main {
    		 border-left: 10px solid darkred;
     		color: white;
 			}	
-	
+#container {
+    position: relative;
+}	
 #buscador {
     position: absolute;
     bottom: 0;
@@ -81,9 +83,10 @@ main {
 	</div>
 </main>
 
+<div id="container">
 <div id="buscador">
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscador de recetas" title="Type in a name">
-</div>
+</div></div>
 
 <script>
 function openCategoria(evt, categoria) {
