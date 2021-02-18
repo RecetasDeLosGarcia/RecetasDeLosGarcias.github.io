@@ -51,7 +51,10 @@ main {
     		color: white;
 			}	
 	
-
+#buscador {
+    position: absolute;
+    bottom: 0;
+}
 	
 </style>
 	
@@ -78,9 +81,9 @@ main {
 	</div>
 </main>
 
-<div>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscador de recetas" title="Type in a name">
-	</div>
+<div id="buscador">
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscador de recetas" title="Type in a name">
+</div>
 
 <script>
 function openCategoria(evt, categoria) {
