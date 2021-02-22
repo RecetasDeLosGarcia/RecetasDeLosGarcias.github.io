@@ -6,7 +6,7 @@ class Indexador {
     }
 
     readFiles() {
-        var webs = ["index.html", "recetas.html"];
+        var webs = ["index.html", "listado.html"];
         this.indexar(webs, this);
     }
     addDataToTable(data, url, tag) {
