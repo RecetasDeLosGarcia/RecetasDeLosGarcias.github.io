@@ -1,0 +1,87 @@
+		body {background-color: Ghostwhite;
+			margin: 10px}
+		
+		#titulo {
+			color: darkred;
+			font size: 7}
+		h1 {
+			color: darkred;
+			margin: 30px}
+		h2 {
+			color: darkred;
+			margin: 30px}
+		p, lu, li {  
+			margin-left: 30px;
+  			margin-right: 30px;}
+		table {
+ 			 width: 75%;
+			margin-left: 70px;
+			}
+		th {
+  		height: 70px;
+			}
+		
+		#foto_tabla {
+  			height: 50px;
+			width: 50px;
+			text-align: center;
+		}
+		#preparacion {
+			width: 350px;
+ 			border: black 2px solid;
+  			float: right;
+			background-color: white
+		}
+		
+		.contenedor-tabla{display: table;
+			width:70%;
+			border=1; 
+			margin: 0 auto;
+			margin-right: 50px}
+
+		.contenedor-fila{display: table-row;}
+
+		.contenedor-columna{display: table-cell;
+				width: 100%;
+				margin: auto;
+				text-align: left;
+				margin-bottom: 50px;}
+		#menu {
+		float:right
+			}
+			
+		#menu ul {
+    			list-style-type: none;
+    			margin: 0px;
+    			padding: 0px;
+    			width: 300px;
+    			font-family: Arial, sans-serif;
+    			font-size: 11pt;
+
+		}
+		
+		#menu ul {
+    			list-style-type: none;
+   			 margin: 0px;
+    			padding: 0px;
+   			 width: 200px;
+    			font-family: Arial, sans-serif;
+    			font-size: 11pt;
+			}
+		
+		#menu ul li {
+    			background-color: darkred;
+				}
+
+		#menu ul li a {
+    			color: white;
+   	 		text-decoration: none;
+    			text-transform: uppercase;
+    			display: block;
+    			padding: 10px 10px 10px 20px;
+			}
+ 		#menu ul li a:hover {
+   		 background: #000;
+   		 border-left: 10px solid darkred;
+    		color: white;
+			}
