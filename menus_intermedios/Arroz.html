@@ -9,7 +9,8 @@
 	<header>
 		<big> <h1> Arroz </h1></big>
 	</header>
-
+{% for post in paginator.html %}
+	{% include paginator.html % }
 	
 	
 	<div id="menu">
