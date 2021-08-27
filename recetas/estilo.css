@@ -77,7 +77,9 @@ body {background-color: Ghostwhite;
 			table-layout:fixed;
 			width:45%; 
 			aling:center;
-			margin:30px'
+			margin:30px;
+			border: black 2px solid;
+			background-color: white
 		}
 
 		#ingredientes table tr td {
